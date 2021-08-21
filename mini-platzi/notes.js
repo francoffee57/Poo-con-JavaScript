@@ -72,4 +72,10 @@ console.log(pablito)
     //export default class NomClase{}
 
 //importar una clase o una funcion
-    //import NomClase from './ruta.js' 
+    //import NomClase from './ruta.mjs' 
+
+// para trabajar con modulos a los archivos los huardamos con la extencian ".mjs"
+    //import { PlatziClass } from "./main.mjs";
+
+//Para exportarlos a HTML:
+    //<script src="module.mjs" type="module"></script>
