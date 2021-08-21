@@ -68,6 +68,8 @@ console.log(pablito)
 pablito.aprobarCurso('Curso de terminal y linea de comandos')
 console.log(pablito)
 
+//Exportar una clase o una funcion
+    //export default class NomClase{}
 
-
-//
+//importar una clase o una funcion
+    //import NomClase from './ruta.js' 
