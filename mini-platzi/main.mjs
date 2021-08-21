@@ -119,10 +119,3 @@ const miguelito = new Student({
       escuelaData,
     ],
 });
-
-console.log(precentacion.play())
-
-// const stopCourse = setInterval(()=>{
-//     console.log(precentacion.stop())
-// }, 3000)
-

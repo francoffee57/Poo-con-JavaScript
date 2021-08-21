@@ -9,10 +9,11 @@ export class classesMiniPlatzi {
     {
         this.nameClasse = nameClasse;
         this.resources = resources;
-        this.videoID = videoID
+        this.videoID = videoID;
+        this.moodPlay = moodPlay;
     }
     play(){
-        if (!moodPlay) {
+        if(!this.moodPlay) {
             this.moodPlay = true
             videoPlay(this.videoID)
         }
