@@ -23,4 +23,28 @@ export class Student{
     addLearningPaths(newLearningPaths){
         this.learningPaths.push(newLearningPaths)
     }
+    
+}
+
+export class FreeStudent extends Student{
+    constructor(props){
+        super(props)
+    }
+    approveCourse(newCourse) {
+        if (newCourse.isFree) {
+          this.approvedCourses.push(newCourse);
+          console.log(`Felicidades por aprobar el curso de ${newCourse.name}`)
+        } else {
+          console.warn("Lo sentimos, " + this.name + ", solo puedes tomar cursos abiertos");
+        }
+    }
+}
+export class ProStudent extends Student{
+    constructor(props){
+        super(props)
+    }
+    approveCourse(newCourse) {
+        this.approvedCourses.push(newCourse);
+        console.log(`Felicidades por aprobar el curso de ${newCourse.name}`)
+    }
 }

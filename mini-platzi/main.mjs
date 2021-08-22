@@ -1,10 +1,10 @@
-
-import { Student } from "./classes/student.mjs";
+//Importando las clases
+import { Student, ProStudent, FreeStudent } from "./classes/student.mjs";
 import { LearningPath } from "./classes/learning-path.mjs";
 import { Courses } from "./classes/courses.mjs";
 import { classesMiniPlatzi } from "./classes/classes-mini-platzi.mjs";
 
-//Clases de los cursos ----------------------------------------------
+//Clases de los cursos ----------------------------------------------------------------------------------
 const precentacion = new classesMiniPlatzi({
     nameClasse: 'Precentación del curso',
     videoID : '42dwdas',
@@ -23,7 +23,7 @@ const queUnity = new classesMiniPlatzi({
 })
 
 
-//Courses -----------------------------------------------------
+//Courses ----------------------------------------------------------------------------------------------
 const gitGithub = new Courses({
     name: 'Curso de Git y Github',
     classes : [
@@ -44,7 +44,8 @@ const programacionBasica = new Courses({
     classes : [
         precentacion,
         cierreCurso
-    ]
+    ],
+    isFree: true,
 })
 const python = new Courses({
     name: 'Curso de Python',
@@ -70,7 +71,7 @@ const unity = new Courses({
 })
 
 
-//Escuelas / Rutas de aprendizaje --------------------------------------
+//Escuelas / Rutas de aprendizaje -----------------------------------------------------------------------
 const escuelaWeb = new LearningPath({
     name: 'Escuela de Desarrollo Web',
     courses: [
@@ -119,3 +120,31 @@ const miguelito = new Student({
       escuelaData,
     ],
 });
+
+
+
+const juanito = new FreeStudent({
+    name: "JuanDC",
+    username: "juandc",
+    email: "juanito@juanito.com",
+    twitter: "fjuandc",
+    learningPaths: [
+      escuelaWeb,
+      escuelaVgs,
+    ],
+  });
+  
+  const migue = new ProStudent({
+    name: "Miguelito",
+    username: "migelitofeliz",
+    email: "miguelito@juanito.com",
+    instagram: "migelito_feliz",
+    learningPaths: [
+      escuelaWeb,
+      escuelaData,
+    ],
+  });
+
+  const imprime = migue.approveCourse(python)
+
+  console.log(imprime)

@@ -79,3 +79,29 @@ console.log(pablito)
 
 //Para exportarlos a HTML:
     //<script src="module.mjs" type="module"></script>
+
+
+//Herencia------------------------------------------------------------------------------
+ 
+//Clase padre
+class Student {
+    constructor({
+      name,
+      email,
+    }) {
+      this.name = name;
+      this.email = email;
+  }
+}
+class StudentHijo1 extends Student {
+    constructor(props) {
+      super(props);  //Con esto hereda del la clase padre
+    }
+  }
+  
+  class StudentHijo2 extends Student {
+    constructor(props) {
+      super(props);
+    }
+  }
+  
